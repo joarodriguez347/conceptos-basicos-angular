@@ -1,0 +1,27 @@
+
+<p>Listado de Deagon Ball Z</p>
+
+
+<div *ngIf=" elementoBortrado != ''; else noBorrado">
+    <h3>Elemento borrado: <small>{{elementoBortrado}}</small></h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>No se ha borrado nada.</h3>
+</ng-template>
+
+
+<button (click)="borrarLista()">Borrar</button>
+
+
+<ul *ngFor="let valor of miLista; let i = index">
+    
+    <li>
+            {{i+1}} - {{valor}}
+    </li>
+
+</ul>
+
+
+
+
